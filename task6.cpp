@@ -6,7 +6,7 @@ string replace(const string& str, const string& old, const string& new_str){
     string s = str;
     while (s.find(old) != string::npos){
         int f = s.find(old);
-        s = s.substr(0, f) + new_str + s.substr(f + old.length(),s.length());
+        s = s.substr(0, f) + new_str + s.substr(f + old.length(), s.length() - (f + old.length()));
     }
     return s;
 }
