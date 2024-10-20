@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-string replace(const string str, const string old, const string new_str){
+string replace(const string& str, const string& old, const string& new_str){
     string s = str;
     while (s.find(old) != string::npos){
         int f = s.find(old);
